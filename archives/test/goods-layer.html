@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="pic">
+        <!--<img src="./images/pic1.png" alt="">-->
+    </div>
+</body>
+<script>
+    window.onload = function () {
+        function RandomNumBoth(Min, Max) {
+            return Min + Math.round(Math.random() * Max - Min);
+        }
+        var num = RandomNumBoth(0, 2);
+        var picArray = ['./images/pic0.png', './images/pic1.png', './images/pic2.png']
+        var pic = document.getElementById('pic');
+        var img = "<img src=" + picArray[num] + " alt=\"\">";
+        pic.innerHTML = img
+    }
+
+</script>
+
+</html>
